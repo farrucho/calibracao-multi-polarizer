@@ -74,7 +74,7 @@ print(f"Chi²: {chi2:.4f}")
 print(f"ndf: {ndf}")
 print(f"Chi²/ndf: {chi2_ndf:.4f}")
 print(f"Optimized Parameters:\nPhi0: {phi0_opt:.4f}\nPhi1: {phi1_opt:.4f}\nPhi2: {phi2_opt:.4f}\n"
-      f"Phi3: {phi3_opt:.4f}\nPhi4: {phi4_opt:.4f}\nPhi5: {phi5_opt:.4f}\nA: {A_opt:.4f}")
+      f"Phi3: {phi3_opt:.4f}\nPhi4: {phi4_opt:.4f}\nPhi5: {phi5_opt:.4f}\nA: {A_opt:.4f}\nA_lux: {(A_opt*75/225):.4f}")
 
 # Setup para intensidade máxima
 print(f"Setup para varrimento com intensidade máxima:\n"
