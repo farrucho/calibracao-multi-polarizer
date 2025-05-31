@@ -16,7 +16,7 @@ with open('data_corrected.csv','w') as file:
                     correct_lines.remove(line)
                 else:
                     # para remover o ultimo ;
-                    if(float(line.split(';')[-2]) >= 200):
+                    if(float(line.split(';')[-2]) >= 50):
                         file.write(line[0:-2] + "\n")
         except:
             None
@@ -78,8 +78,9 @@ print(f"Optimized Parameters:\nPhi0: {phi0_opt:.4f}\nPhi1: {phi1_opt:.4f}\nPhi2:
 
 # Setup para intensidade máxima
 print(f"Setup para varrimento com intensidade máxima:\n"
-      f"{phi0_opt-phi1_opt:.4f}\n"
-      f"{phi0_opt-phi2_opt:.4f}\n"
-      f"{phi0_opt-phi3_opt:.4f}\n"
-      f"{phi0_opt-phi4_opt:.4f}\n"
-      f"{phi0_opt-phi5_opt:.4f}")
+      f"{(phi0_opt-phi1_opt + 180 if phi0_opt-phi1_opt < 0 else phi0_opt-phi1_opt):.4f}\n"
+      f"{(phi0_opt-phi2_opt + 180 if phi0_opt-phi2_opt < 0 else phi0_opt-phi2_opt):.4f}\n"
+      f"{(phi0_opt-phi3_opt + 180 if phi0_opt-phi3_opt < 0 else phi0_opt-phi3_opt):.4f}\n"
+      f"{(phi0_opt-phi4_opt + 180 if phi0_opt-phi4_opt < 0 else phi0_opt-phi4_opt):.4f}\n"
+      f"{(phi0_opt-phi5_opt + 180 if phi0_opt-phi5_opt < 0 else phi0_opt-phi5_opt):.4f}\n"
+)
